@@ -1,4 +1,5 @@
-﻿// Задача1
+﻿// 1.задача с нахождением max и min значение их двух чисел
+
 Console.WriteLine("Введите два целых числа");
 int N = int.Parse(Console.ReadLine());
 int M = int.Parse(Console.ReadLine());
