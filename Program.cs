@@ -26,7 +26,7 @@ if (ostatok==0) Console.WriteLine("чисто чётное");
 else Console.WriteLine("число нечётное");
 */
 
-// 4. все чётные числа от 1 до N
+/* 4. все чётные числа от 1 до N
 Console.WriteLine("Введите положительное число N больше 1");
 int N = int.Parse(Console.ReadLine());
 int k=2;
@@ -36,3 +36,36 @@ while (k<N){
     k=k+2;
 }
 if (ost==0) Console.Write(k);
+*/
+
+// 5. Определение, какая сумма элементов массива больше – с первого до элемента с номером К, или от элемента с номером К+1 до последнего
+Console.WriteLine("Введите число элементов массива");
+int length = int.Parse(Console.ReadLine());
+int[] array = new int[length];
+int index=0;
+Console.WriteLine("Введите массив столбцом");
+while (index<length){
+    int elementmassiva = int.Parse(Console.ReadLine());
+    array[index]=elementmassiva;
+    index++;
+}
+int sum1=0;
+int ind=0;
+Console.WriteLine("Введите номер элемента - K");
+int K = int.Parse(Console.ReadLine());
+while (ind<(K-1)){
+    sum1=sum1+array[ind];
+    ind++;
+}
+int sum2=0;
+int indx=K;
+while (indx<length){
+    sum2=sum2+array[indx];
+    indx++;
+}
+if (sum1>sum2) Console.WriteLine("Сумма элементов первой части массива больше");
+else if (sum1<sum2) Console.WriteLine("Сумма элементов второй части массива больше");
+else Console.WriteLine("Обе части массива равны");
+
+
+
