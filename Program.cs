@@ -18,9 +18,21 @@ if (M>max) max=M;
 Console.WriteLine(max);
 */
 
-// 3. задача на определение, является ли число чётным
+/* 3. задача на определение, является ли число чётным
 Console.WriteLine("Введите целое число");
 int N = int.Parse(Console.ReadLine());
 int ostatok=N%2;
 if (ostatok==0) Console.WriteLine("чисто чётное");
 else Console.WriteLine("число нечётное");
+*/
+
+// 4. все чётные числа от 1 до N
+Console.WriteLine("Введите положительное число N больше 1");
+int N = int.Parse(Console.ReadLine());
+int k=2;
+int ost=N%2;
+while (k<N){
+    Console.Write(k+", ");
+    k=k+2;
+}
+if (ost==0) Console.Write(k);
