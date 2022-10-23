@@ -1,16 +1,7 @@
 ﻿// Задача1
-Console.WriteLine("Введите любое целое число");
+Console.WriteLine("Введите два целых числа");
 int N = int.Parse(Console.ReadLine());
-int temp = 0;
-int sum = 0;
-while (N!=0)
-{
-    temp = N%10;
-    sum = sum +temp;
-    N=N/10;
-}
-Console.WriteLine(sum);
-
-
-
-
+int M = int.Parse(Console.ReadLine());
+if (N>M) Console.WriteLine($"max={N}, min={M}");
+else if (N<M) Console.WriteLine($"max={M}, min={N}");
+else if (N==M) Console.WriteLine("числа равны");
